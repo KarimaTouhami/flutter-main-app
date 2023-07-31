@@ -14,7 +14,7 @@ import '../../widget/drawer.dart';
 import '../categories_screen/widget/appbar_common.dart';
 
 class HomeScreen extends StatelessWidget {
-    HomeScreen({super.key});
+  HomeScreen({super.key});
 
   final GlobalKey<ScaffoldState> _globalKey = GlobalKey();
 
@@ -40,54 +40,51 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: height15),
-              child: Stack(
-                  children: [
+              child: Stack(children: [
                 Image.asset(
                   AssetImagePaths.homeinage,
                 ),
-                 Column(
-                   children: [
-                     SizedBox(height: Get.height/10),
-                     const Center(
-                       child: Text(StringConfig.disISCOVERTOURNEXT,
-                           textAlign: TextAlign.center,
-                           style: TextStyle(
-                             fontFamily: notoSerifTC,
-                             color: wightColor,
-                             height: 1.6,
-                             fontWeight: FontWeight.w900,
-                             fontSize: height27,
-                           )),
-                     ),
-                     const Text(StringConfig.nEWCOLLECTION,
-                         textAlign: TextAlign.center,
-                         style: TextStyle(
-                           fontFamily: StringConfig.poppins,
-                           color: wightColor,
-                           fontWeight: FontWeight.w500,
-                           fontSize: height15,
-                         )),
-                     SizedBox(
-                       height: Get.height/30),
-                       Container(
-                           height: height30,
-                           width: height90,
-                           decoration: BoxDecoration(
-                               color: wightColor,
-                               borderRadius: BorderRadius.circular(size4)),
-                           child: const Center(
-                             child: Text(StringConfig.string_10OFF,
-                                 textAlign: TextAlign.center,
-                                 style: TextStyle(
-                                   fontFamily: StringConfig.poppins,
-                                   color: appColor,
-                                   fontWeight: FontWeight.w500,
-                                   fontSize: height15,
-                                 )),
-                           )
-                     )
-                   ],
-                 ),
+                Column(
+                  children: [
+                    SizedBox(height: Get.height / 10),
+                    const Center(
+                      child: Text(StringConfig.disISCOVERTOURNEXT,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: notoSerifTC,
+                            color: wightColor,
+                            height: 1.6,
+                            fontWeight: FontWeight.w900,
+                            fontSize: height27,
+                          )),
+                    ),
+                    const Text(StringConfig.nEWCOLLECTION,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: StringConfig.poppins,
+                          color: wightColor,
+                          fontWeight: FontWeight.w500,
+                          fontSize: height15,
+                        )),
+                    SizedBox(height: Get.height / 30),
+                    Container(
+                        height: height30,
+                        width: height90,
+                        decoration: BoxDecoration(
+                            color: wightColor,
+                            borderRadius: BorderRadius.circular(size4)),
+                        child: const Center(
+                          child: Text(StringConfig.string_10OFF,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: StringConfig.poppins,
+                                color: appColor,
+                                fontWeight: FontWeight.w500,
+                                fontSize: height15,
+                              )),
+                        ))
+                  ],
+                ),
               ]),
             ),
             const SizedBox(
@@ -99,12 +96,13 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(
-                  4,
-                  (index) => Obx(() => ImageCircle(
-                    image: homeController.categoryList[index]["Image"],
-                    text: homeController.categoryList[index]["Title"],
-                  ), )
-                ),
+                    4,
+                    (index) => Obx(
+                          () => ImageCircle(
+                            image: homeController.categoryList[index]["Image"],
+                            text: homeController.categoryList[index]["Title"],
+                          ),
+                        )),
               ),
             ),
             const Padding(
@@ -125,8 +123,7 @@ class HomeScreen extends StatelessWidget {
                   child: Image.asset(
                 AssetImagePaths.devider,
                 height: size10,
-              )
-              ),
+              )),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: height10),
@@ -139,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 10.0, // Spacing between rows
                       crossAxisSpacing: 10.0, // Spacing between columns
                       childAspectRatio: 1 / 1.5),
-                      itemCount: 4, // Number of items to display
+                  itemCount: 4, // Number of items to display
                   itemBuilder: (BuildContext context, int index) {
                     return Card(
                       elevation: 0.5,
@@ -149,10 +146,10 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Center(
                               child: GestureDetector(
-                                  child: Stack(
-                                      children: [
+                                  child: Stack(children: [
                                     Padding(
-                                      padding: const EdgeInsets.only(top: 12, bottom: 12),
+                                      padding: const EdgeInsets.only(
+                                          top: 12, bottom: 12),
                                       child: Image.asset(
                                         allProductList[index].imagePng!,
                                         height: 165,
@@ -173,10 +170,12 @@ class HomeScreen extends StatelessWidget {
                                   }),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 12),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12),
                               child: Row(
-                                  mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                                  children:[
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
                                     Text(allProductList[index].name!,
                                         style: const TextStyle(
                                           fontFamily: StringConfig.poppins,
@@ -191,41 +190,25 @@ class HomeScreen extends StatelessWidget {
                                           color: rowColor,
                                         ),
                                         child: const Row(
-                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
                                               Text(StringConfig.string_4_2,
                                                   style: TextStyle(
-                                                    fontFamily: StringConfig.poppins,
-                                                    color: titleColor,
-                                                    fontWeight: FontWeight.w400,
-                                                    fontSize: size9)),
-                                              Icon(Icons.star,
+                                                      fontFamily:
+                                                          StringConfig.poppins,
+                                                      color: titleColor,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      fontSize: size9)),
+                                              Icon(
+                                                Icons.star,
                                                 size: size12,
                                                 color: appColor,
                                               )
                                             ]))
                                   ]),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 12),
-                              child: Row(
-                                children: [
-                                  Text(allProductList[index].price!, style: const TextStyle(
-                                          fontFamily: StringConfig.poppins,
-                                          fontSize: size12,
-                                          height: size1_5,
-                                          fontWeight: FontWeight.w500,
-                                          color: titleColor)),
-                                  const SizedBox(width: height3),
-                                  Text(allProductList[index].discount!,
-                                      style: const TextStyle(
-                                          fontFamily: StringConfig.poppins,
-                                          fontSize: size9,
-                                          fontWeight: FontWeight.w400,
-                                          color: redColor))
-                                ],
-                              )
-                              ),
                           ]),
                     );
                   },
@@ -265,10 +248,11 @@ class HomeScreen extends StatelessWidget {
                 children: List.generate(
                     6,
                     (index) => Obx(() => ContainerBrandWidget(
-                      image: homeController.topBrand[index]["image"],
-                      brandName: homeController.topBrand[index]["brandName"],
-                      discount: homeController.topBrand[index]["discount"],
-                    ))),
+                          image: homeController.topBrand[index]["image"],
+                          brandName: homeController.topBrand[index]
+                              ["brandName"],
+                          discount: homeController.topBrand[index]["discount"],
+                        ))),
               ),
             ),
             Image.asset(

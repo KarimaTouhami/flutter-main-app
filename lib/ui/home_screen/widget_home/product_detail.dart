@@ -1,4 +1,3 @@
-
 import 'package:ecommerce_ui_kit/config/routes/app_routes.dart';
 import 'package:ecommerce_ui_kit/util/colors.dart';
 import 'package:ecommerce_ui_kit/util/string_config.dart';
@@ -10,13 +9,13 @@ import '../../../util/size_config.dart';
 class ProductDetail extends StatelessWidget {
   String? imagePng;
   String? detailImage;
-  ProductDetail({super.key, this.imagePng,this.detailImage});
+  ProductDetail({super.key, this.imagePng, this.detailImage});
 
   @override
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.all(size10),
-        width: Get.width/2.3,
+        width: Get.width / 2.3,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(size10),
             border: Border.all(color: Colors.grey.withOpacity(0.1))),
@@ -24,8 +23,7 @@ class ProductDetail extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(
-                  children: [
+              Stack(children: [
                 Padding(
                     padding: const EdgeInsets.only(bottom: size10),
                     child: GestureDetector(
@@ -41,9 +39,7 @@ class ProductDetail extends StatelessWidget {
                       height: height18,
                     ))
               ]),
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 const Text(StringConfig.lockiesShirt,
                     style: TextStyle(
                       fontFamily: StringConfig.poppins,
@@ -59,7 +55,7 @@ class ProductDetail extends StatelessWidget {
                     ),
                     child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children:  [
+                        children: [
                           Text(StringConfig.string_4_2,
                               style: TextStyle(
                                 fontFamily: StringConfig.poppins,
@@ -75,26 +71,23 @@ class ProductDetail extends StatelessWidget {
                         ]))
               ]),
               RichText(
-                text: const TextSpan(
-                  children: [
-                    TextSpan(
-                        text: '\$${245}',
-                        style: TextStyle(
-                            fontFamily: StringConfig.poppins,
-                            fontSize: size12,
-                            height: size1_5,
-                            fontWeight: FontWeight.w500,
-                            color: titleColor)),
-                    TextSpan(
-                        text: StringConfig.string_50off,
-                        style: TextStyle(
-                            fontFamily: StringConfig.poppins,
-                            fontSize: size9,
-                            fontWeight: FontWeight.w400,
-                            color: redColor)),
-                  ]
-                )
-              )
+                  text: const TextSpan(children: [
+                TextSpan(
+                    text: '\$${245}',
+                    style: TextStyle(
+                        fontFamily: StringConfig.poppins,
+                        fontSize: size12,
+                        height: size1_5,
+                        fontWeight: FontWeight.w500,
+                        color: titleColor)),
+                TextSpan(
+                    text: StringConfig.string_50off,
+                    style: TextStyle(
+                        fontFamily: StringConfig.poppins,
+                        fontSize: size9,
+                        fontWeight: FontWeight.w400,
+                        color: redColor)),
+              ]))
             ]));
   }
 }

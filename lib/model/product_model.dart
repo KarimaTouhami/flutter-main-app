@@ -10,44 +10,12 @@ class AllProduct {
 }
 
 List<AllProduct> allProductList = [
-  AllProduct(
-      name: 'Lockies Shirt',
-      price: '\$${245}',
-      discount: '50%',
-      imagePng: AssetImagePaths.proDetail),
-  AllProduct(
-      name: 'Black Blazer',
-      price: '\$${534}',
-      discount: '20%',
-      imagePng: AssetImagePaths.secondgril),
-  AllProduct(
-      name: 'Blue Blazer',
-      price: '\$${670}',
-      discount: '30%',
-      imagePng: AssetImagePaths.mansecod),
-  AllProduct(
-      name: 'Blue Shirt',
-      price: '\$${400}',
-      discount: '40%',
-      imagePng: AssetImagePaths.manthard),
-  AllProduct(
-      name: 'Lockies Shirt',
-      price: '\$${245}',
-      discount: '50%',
-      imagePng: AssetImagePaths.proDetail),
-  AllProduct(
-      name: 'Black Blazer',
-      price: '\$${534}',
-      discount: '20%',
-      imagePng: AssetImagePaths.secondgril),
-  AllProduct(
-      name: 'Blue Blazer',
-      price: '\$${670}',
-      discount: '30%',
-      imagePng: AssetImagePaths.mansecod),
-  AllProduct(
-      name: 'Blue Shirt',
-      price: '\$${400}',
-      discount: '40%',
-      imagePng: AssetImagePaths.manthard),
+  AllProduct(name: 'Lockies Shirt', imagePng: AssetImagePaths.proDetail),
+  AllProduct(name: 'Black Blazer', imagePng: AssetImagePaths.secondgril),
+  AllProduct(name: 'Blue Blazer', imagePng: AssetImagePaths.mansecod),
+  AllProduct(name: 'Blue Shirt', imagePng: AssetImagePaths.manthard),
+  AllProduct(name: 'Lockies Shirt', imagePng: AssetImagePaths.proDetail),
+  AllProduct(name: 'Black Blazer', imagePng: AssetImagePaths.secondgril),
+  AllProduct(name: 'Blue Blazer', imagePng: AssetImagePaths.mansecod),
+  AllProduct(name: 'Blue Shirt', imagePng: AssetImagePaths.manthard),
 ];
