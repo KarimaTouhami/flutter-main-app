@@ -3,6 +3,7 @@ class CartProduct {
   String productName;
   String description;
   bool? wishlist = false;
+
   CartProduct({
     required this.imagePng,
     required this.productName,
