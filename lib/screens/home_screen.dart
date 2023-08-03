@@ -154,52 +154,31 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.all(16),
               child: SizedBox(
                 width: double.infinity,
-                height: 600,
+                height: 300,
                 child: FutureBuilder(
                   future: _getProducts(),
                   builder: (BuildContext context,
                       AsyncSnapshot<List<dynamic>> snapshot) {
                     if (snapshot.hasData) {
-                      return GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount:
-                              2, // Adjust the number of columns as needed
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                        ),
+                      return ListView.separated(
                         itemCount: snapshot.data!.length,
                         itemBuilder: (BuildContext context, int index) {
-                          return Card(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 12, bottom: 12),
-                                  child: Image.network(
-                                    snapshot.data![index]["images"][0]["src"],
-                                    height: 120,
-                                    width: 150,
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Text(
-                                    snapshot.data![index]["name"],
-                                    style: const TextStyle(
-                                      fontFamily: StringConfig.poppins,
-                                      color: titleColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: height14,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                          return ListTile(
+                            leading: CircleAvatar(
+                              child: Image.network(
+                                snapshot.data![index]["images"][0]["src"],
+                              ),
                             ),
+                            title: Text(snapshot.data![index]["name"]),
+                            subtitle: Text("Buy now for \$ " +
+                                snapshot.data![index]["price"]),
                           );
                         },
+                        separatorBuilder: (BuildContext context, int index) =>
+                            Divider(height: 1),
                       );
                     }
-                    return const Center(
+                    return Center(
                       child: CircularProgressIndicator(color: Colors.black),
                     );
                   },
