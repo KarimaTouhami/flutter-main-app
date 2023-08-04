@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,8 +20,7 @@ class CategoryScreen extends StatefulWidget {
 class _CategoryScreenState extends State<CategoryScreen> {
   // A list to store the categories fetched from the API
   List<dynamic> categories = [];
-  
-  get http => null;
+  final client = http.Client();
 
   @override
   void initState() {

@@ -13,6 +13,7 @@ import '../../util/colors.dart';
 import '../../util/size_config.dart';
 import '../../widget/drawer.dart';
 import '../categories_screen/widget/appbar_common.dart';
+import '../ui/categories_screen/widget/appbar_common.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

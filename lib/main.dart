@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Ecommerce UI-Kit',
+      title: 'ItaliaMachines',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: appColor,
