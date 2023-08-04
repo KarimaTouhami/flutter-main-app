@@ -166,10 +166,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               2, // Adjust the number of columns as needed
                           crossAxisSpacing: 10,
                           mainAxisSpacing: 10,
+                          childAspectRatio: 1 / 1.5,
                         ),
                         itemCount: snapshot.data!.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Card(
+                            elevation: 0.5,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -183,13 +185,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 Expanded(
-                                  child: Text(
-                                    snapshot.data![index]["name"],
-                                    style: const TextStyle(
-                                      fontFamily: StringConfig.poppins,
-                                      color: titleColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: height14,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      snapshot.data![index]["name"],
+                                      style: const TextStyle(
+                                        fontFamily: StringConfig.poppins,
+                                        color: titleColor,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: height14,
+                                      ),
                                     ),
                                   ),
                                 ),

@@ -20,6 +20,7 @@ dependencies:
   flutter_svg: ^2.0.3
   pinput:
   get: ^4.6.5
+  http: ^0.13.3
   carousel_slider: ^4.2.1
   dots_indicator: ^2.1.0
   cached_network_image: ^3.2.3
